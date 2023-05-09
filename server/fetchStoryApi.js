@@ -74,13 +74,13 @@ export async function fetchStory({room, message = null} = {}) {
         });
     }
 
-    const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: room.history
-    });
-
-    const response = completion.data.choices[0].message.content;
     try {
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: room.history
+        });
+        const response = completion.data.choices[0].message.content;
+
         const res = JSON.parse(response);
         room.history.push({
             "role": "assistant",

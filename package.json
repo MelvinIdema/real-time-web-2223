@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "human-id": "^4.0.0",
+    "react-router-dom": "^6.10.0",
+    "styled-components": "^5.3.10",
+    "uuid": "^9.0.0"
+  }
+}

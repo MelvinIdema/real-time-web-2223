@@ -1,0 +1,10 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: hsl(220, 12%, 14%);
+  color: #fff;
+}

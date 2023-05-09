@@ -10,7 +10,7 @@ export const AppContainer = styled.div`
   
   ${props => props.isWaiting === false && css`
     grid-template-rows: 1fr;
-    grid-template-columns: auto 6fr;
+    grid-template-columns: auto 65vw 1fr;
   `}
   
   height: 100vh;
@@ -67,5 +67,12 @@ export const JoinGameContainer = styled.div`
   background-color: hsl(220, 12%, 14%);
   margin: 16px;
   padding: 32px;
+  border-radius: 16px;
+`;
+
+export const StoryContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: hsl(220, 12%, 4%);
   border-radius: 16px;
 `;

@@ -4,16 +4,17 @@ import {socket} from '../services/socket'
 
 import UserList from '../compositions/UserList'
 import Chat from '../compositions/Chat'
+import Story from '../compositions/Story'
 
 import GameContext from '../providers/GameContext.js'
 
-import {AppContainer, HeaderContainer} from './Game.style.js'
+import {AppContainer, HeaderContainer, StoryContainer} from './Game.style.js'
 
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function Game() {
-    const {user, users, room, setRoom} = useContext(GameContext);
+    const {user, users, room, setRoom, story, isFetching} = useContext(GameContext);
     const navigate = useNavigate();
     const [isWaiting, setIsWaiting] = useState(true);
 
@@ -62,6 +63,9 @@ function Game() {
                 {!isWaiting ? (
                     <>
                         <UserList/>
+                        <StoryContainer>
+                            <Story story={story} isLoading={isFetching}/>
+                        </StoryContainer>
                         <Chat/>
                     </>
                 ) : <>

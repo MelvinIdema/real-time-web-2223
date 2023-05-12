@@ -1,12 +1,13 @@
 import humanId from 'human-id';
 
 export default class Room {
-    constructor({ id = humanId(), status = 'waiting', users = [], messages = [] } = {}) {
+    constructor({ id = humanId(), status = 'waiting', users = [], messages = [], history = [] } = {}) {
 
         this.id = id;
         this.users = users;
         this.messages = messages;
         this.status = status;
+        this.history = [];
     }
 
     addMessage(message) {

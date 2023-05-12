@@ -3,6 +3,7 @@ import GameContext from './GameContext.js'
 import {socket} from "../services/socket.js";
 import {createUser} from "../entities/User.js";
 import {toast} from "react-toastify";
+import {createStory} from "../entities/Story.js";
 
 function GameProvider({children}) {
     const [user, setUser] = useState(null);
@@ -10,9 +11,29 @@ function GameProvider({children}) {
     const [room, setRoom] = useState(null);
     const [users, setUsers] = useState([]);
 
+    const [story, setStory] = useState(null);
+    const [isFetching, setIsFetching] = useState(true);
+
+    useEffect(() => {
+        socket.on('room:storyUpdated', (story) => {
+            const newStory = createStory(story);
+            setStory(newStory);
+            setIsFetching(false);
+        });
+
+        socket.on('story:fetching', () => {
+            setIsFetching(true);
+        })
+
+        return () => {
+            socket.off('room:storyUpdated');
+            socket.off('story:fetching');
+        }
+    }, [story, isFetching])
+
     useEffect(() => {
         socket.on('room:started', () => {
-            if(room) {
+            if (room) {
                 setRoom({...room, status: 'started'})
             }
         });
@@ -24,7 +45,7 @@ function GameProvider({children}) {
 
     useEffect(() => {
         socket.auth = user;
-        if(!socket.connected) {
+        if (!socket.connected) {
             socket.connect();
             setConnected(true)
         }
@@ -82,7 +103,7 @@ function GameProvider({children}) {
     }, [users])
 
     return (
-        <GameContext.Provider value={{user, setUser, connected, room, setRoom, users, setUsers}}>
+        <GameContext.Provider value={{user, setUser, connected, room, setRoom, users, setUsers, story, setStory, isFetching}}>
             {children}
         </GameContext.Provider>
     )

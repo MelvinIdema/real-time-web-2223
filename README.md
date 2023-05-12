@@ -1,146 +1,135 @@
-# Real-Time Web @cmda-minor-web 2022 - 2023
+<h1 align='center'>
+  📜 <br>
+  QuestMate
+</h1>
+<p align="center">
+  Multi-User Collaborative text-based adventure app with AI-powered adventures.
+  <br> <br>
+      <strong>App:</strong> <a href="https://questmate.art/"> https://questmate.art/ </a> <br>
+  <strong>Proces:</strong> <a href="https://questmate.art/proces/index.html"> https://questmate.art/proces/index.html </a>
+</p>
 
-## Table of Contents
-- [Synopsis](#synopsis)
-- [Description](#description)
-- [Communication](#communication)
-- [Goals](#goals)
-- [Grading](#grading)
-- [Programme](#programme)
+<div align="center">
 
-## Synopsis
-- Course: Real-Time Web
-- Course Coordinator: Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
-- Minor Coordinator(s): Robert Spier ([@roberrrt-s](https://github.com/roberrrt-s)) & Vasilis van Gemert ([@vasilisvg](https://github.com/vasilisvg))
-- Lecturers: Shyanta Vleugel ([@shyanta](https://github.com/shyanta)) & Justus Sturkenboom ([@ju5tu5](https://github.com/ju5tu5))
-- Student Assistants: 
-- Credit: 3 ECTS credits
-- Academic year: 2022-2023
-- Programme: Communication and Multimedia Design (full time bachelor)
-- Language: Dutch instructions and English resources
+![Scherm­afbeelding 2023-05-12 om 13.41.54.png](readme%2FScherm%C2%ADafbeelding%202023-05-12%20om%2013.41.54.png)
 
-## Description
-During this course you will learn how to build a real-time application. You will learn techniques to setup an open connection between the client and the server. This will enable you to send data in real-time both ways, at the same time.
+</div>
 
-## Communication
-- [Github](https://github.com/cmda-minor-web/real-time-web-2223)
-- [Microsoft Teams](https://teams.microsoft.com/l/channel/19%3a61df853840064eae8ae6fc2dc9fc4566%40thread.tacv2/09%2520Real%2520Time%2520Web?groupId=c8b97eb6-ad53-4531-ad66-5c3c6297951c&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7)
-- [Brightspace](https://dlo.mijnhva.nl/d2l/home/456154)
+## Table of Contents 🗂
+- [Description 📝](#description)
+- [Features 🌟](#features)
+- [Installeren 🔍](#install)
+- [Gebruiken 🔧](#usage)
+- [Data Life Cycle ♻️ & API 📡](#data-life-cycle)
 
-If you have questions:
-- [Look at the additional resources]()
-- [Use a search engine like startpage](https://www.startpage.com/)
-- [Ask questions on MS Teams](https://teams.microsoft.com/l/channel/19%3a61df853840064eae8ae6fc2dc9fc4566%40thread.tacv2/09%2520Real%2520Time%2520Web?groupId=c8b97eb6-ad53-4531-ad66-5c3c6297951c&tenantId=0907bb1e-21fc-476f-8843-02d09ceb59a7) (please help each other!)
-- [Contact a student-assisstant](#synopsis)
-- [Contact a lecturer](#synopsis)
 
-## Goals
-After finishing this program you can:
-- _deal with real-time complexity;_
-- _handle real-time client-server interaction;_
-- _handle real-time data management;_
-- _handle multi-user support._
+## Description 📝
+QuestMate is een multi-user text-based adventure game waarin je samen met je vrienden 
+een digitale quest beleefd. Met de kracht van Artificiële Intelligentie biedt QuestMate
+rijk gedetailleerde werelden waarin je samen cruciale beslissingen kunt maken.
 
-## Grading
-Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
+Je collectieve keuzes leidden tot een uniek avontuur, elke keer weer.
 
-| Deficiency | Criterion | Improvement |
-|:--|:--|:--|
-|  | *Project* Your app is working and published on Heroku. Your project is thoroughly documented in the `README.md` file in your repository. Included are a description of the data-lifecycle, real-time events and external data source used by your app. |  |
-|  | *Complexity* You’ve implemented enough real-time functionality for us to test your comprehension of the subject. A lot of functionality is self-written. You are able to manipulate online examples live. |  |
-|  | *Client-server interaction* By interacting with the app, a user can influence the data model of the server in real time by directly modifying data OR by influencing API requests between server and source. The student has set up the data manipulations. |  |
-|  | *Data management* The server maintains a data model and each client is continuously updated with the correct data. |  |
-|  | *Multi-user support* Multiple clients can connect to the server. Interaction works as expected and is not dependent on the number of clients. You can explain how your app approaches this. |  |
+### Features 🌟
+- Multi-user
+- AI-powered 
+- Text-based
+- Real-time
 
-## Programme
+## Installeren 🔍
+1. Install [NodeJS](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/).
+2. Clone this repository
 
-### Daily Schedule
-To keep things simple we use a daily schedule that will be used during normal course days (monday/tuesday). We make exceptions for fridays, on these days a different schedule will be given.
+This project exists out of two parts: A front-end (client) and a back-end (server).
 
-| Time | Who | Activity |
-|:--|:--|:--|
-| *~09:00* | *(Shyanta \|\| Justus)* | *Standup* |
-| 09:30 | Tribe *+(Shyanta \|\| Justus)* | Talk with crucial information (make sure you attend!) |
-| 11:00 | Tribe | Work on the (day)assignment |
-|  | Per table *+(Shyanta \|\| Justus)* | Standup |
-| 13:00 | Tribe *+(Student assistants)* | Continue work on the (day)assignment |
-| 16:00ish | Tribe | Wrapup |
+### Client
+1. Navigate to the client folder
+2. Run `npm install` to install all dependencies
+3. Run `npm run dev` to start the development server
+4. Navigate to `localhost:3000` in your browser
+5. Enjoy!
 
-### Week 1 - Getting a grip
-Goal: Build and deploy a simple but unique real-time app
+### Server
+1. Navigate to the server folder
+2. Run `npm install` to install all dependencies
+3. Run `npm run start` to start the server
+4. Enjoy!
 
-#### Monday 17 April 
-**Talk subjects:** Hit the ground running... [(slides)](https://docs.google.com/presentation/d/1MLSch_uKNEDyfz7fo71jbJrprunxQwd9GtgTse8wWpo/edit?usp=sharing) Course objective and explanation of the assignment, examples from last year, explanation of real-time, (live coded) bare bone chat app and deployment on Heroku.\
-**Day assignment:** [(assignment)](./course/week-1.md#assignment-1-make-it-so) Make it so *(as a team)*: Implement (code/style/discuss/deploy) basic chat (or other realtime) functionality on your teampage!
+## Gebruiken 🔧
 
-#### Tuesday 18 April
-**Talk subjects:** My first realtime web app! [(slides)](https://docs.google.com/presentation/d/18eftO3epzIXDjdwl3cn5Wq99fkQYCUnExUqq9P72A3k) Short recap, (local) data management, using (wire) flows for realtime web apps.\
-**Day assignment:** [(assignment)](./course/week-1.md#assignment-2-make-it-so) Make it so *(individually)*. i) Create (code/style/discuss/deploy) a chat app (or other realtime functionality) based on the examples and ii) add your own unique feature!
+Navigeer naar de [app](https://questmate.art/) en vul een gebruikersnaam in. 
+Je kunt nu een quest starten of een quest joinen. Als je een quest start, krijg 
+je een code die je kunt delen met je vrienden. Als je een quest joinet, vul je de 
+code in die je van je vrienden hebt gekregen.
 
-#### Friday 21 april
+<div align="center">
 
-Friday ~~afternoon~~ morning we will have a [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this is really good for your programming insight and helps others refining/refactoring their code.
+![Scherm­afbeelding 2023-05-12 om 13.58.41.png](readme%2FScherm%C2%ADafbeelding%202023-05-12%20om%2013.58.41.png)
 
-| Time | Who | Activity |
-|:--|:--|:--|
-| 9:30 | Tribe *+(Shyanta \|\| Justus)* | Peer review |
-| 11:00 | Tribe *+(Shyanta \|\| Justus)* | Afronding Peer review |
+</div>
 
-### Week 2 - Sockets and data
-Goal: Store, manipulate and share data between server-client   
+Vervolgens wacht je op je vrienden en kun je beginnen met de quest door op "Start Adventure" te klikken:
 
-#### Monday 24 April
-**Talk subjects:** Data driven development?! [(slides)]() Feedback about last week, final assignment and conditions (rubric), explanation of data management, Long polling vs Websockets. \
-**Day assignment:** [(assignment)](./course/week-2.md#assignment-1-proof-of-concept) (Proof of) Concept *(individually)*. i) Create a (3 > 1) concept based on existing data from an API and ii) map this data using modelling techniques.
+<div align="center">
 
-#### Tuesday 25 April
-**Talk subjects:** Above all else, show the data. [(slides)]() Securing real-time web apps, offline support, the publication/subscription model and (case study) Quek!\
-**Day assignment:** [(assignment)](./course/week-2.md#assignment-2-proof-of-concept) Proof of concept *(individually)*: i) Create (code/style/discuss/deploy) part of the core functionality for your concept and ii) show the  corresponding data lifecycle diagram.
+![Scherm­afbeelding 2023-05-12 om 14.00.19.png](readme%2FScherm%C2%ADafbeelding%202023-05-12%20om%2014.00.19.png)
 
-### Week 3 - Dealing with multiple users
-Goal: Handle data sharing and multi-user support 
+</div>
 
-#### Monday 8 May
-**Talk subjects:** Roll your own... [(slides) ]() Data management, the functional programming trinity (map, filter and reduce). OAuth?!
-**Day assignment:** [(assignment)](./course/week-3.md#assignment-1-data-management)
+Elke keer krijg je een korte paragraaf te zien en vervolgens 3 keuzes waarop je kunt stemmen. De optie met de meeste stemmen wordt gekozen.
 
-#### Tuesday 9 May
-**Talk subjects:** Not ignoring the UI-Stack! [(slides)](). Usability, feedback, feedforward etc. in real-time web apps, (case study) postNL loader and FAQ.
-**Day assignment:** [(assignment)](./course/week-3.md#assignment-2-user-testing)
+<div align="center">
 
-#### Friday 12 May
-We will have a final [peer review session](./course/peer-review.md). You will read, comment and fire issues on each others code. Doing this helps others dotting the i’s on their project.
+![Scherm­afbeelding 2023-05-12 om 14.03.22.png](readme%2FScherm%C2%ADafbeelding%202023-05-12%20om%2014.03.22.png)
 
-| Time | Who | Activity |
-|:--|:--|:--|
-| 14.00 | Tribe *+(Shyanta \|\| Justus)* | Peer review |
-| 15.30 | Tribe *+(Shyanta \|\| Justus)* | Finalize your assignment |
-| 16.00 | Tribe *+(Shyanta \|\| Justus)* | (drinks?!) |
+</div>
 
-<!-- Here are some hints for your projects Readme.md! -->
+## Data Life Cycle ♻️ & API 📡
 
-<!-- Start out with a title and a description -->
+_Mocht je meer informatie willen over de data life cycle, de API en m'n 
+proces verwijs ik graag en met enige nadruk naar de 
+[proces pagina](https://questmate.art/proces/index.html). 
+Hierin staat alles met grote detail beschreven._
 
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
+Voor dit project heb ik gebruik gemaakt van de alombekende GPT-3 API van OpenAI als 
+externe databron voor het genereren van het avontuur en de opties.
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+<div align="center">
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+![datamodel.drawio.png](readme%2Fdatamodel.drawio.png)
 
-<!-- Maybe a table of contents here? 📚 -->
+</div>
 
-<!-- ☝️ replace this description with a description of your own work -->
+## Wanna Haves 🌠
+_Dingen die ik nog wil toevoegen:_
+- [ ] Mobile Friendly maken
+- [ ] Geschiedenis van het verhaal beschikbaar stellen
+- [ ] Zien welke optie geselecteerd is
+- [ ] Optie om een nieuw avontuur te starten
+- [ ] Optie om thema's mee te geven
+- [ ] Gebruikers later in de game nog laten kunnen joinen
+- [ ] Aparte Gamemode: Cards of Humanity achtig iets waarbij iedereen iets typed en dan stemmen op de volgende
+- [ ] Betaalde feature: Je eigen optie mee kunnen geven
+- [ ] Betaalde feature: Image Generation als achtergrond
+- [ ] Iedereens muis tonen om nadruk te leggen op het multi-user gedeelte
+- [ ] Voorlezen van de tekst door een AI
+- [ ] Optie om een quest te starten met een random groep mensen
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+_Codematig:_
+- [ ] State-Management puur op de server
+- [ ] Versimpelen van sockets
+- [ ] Complete Refactoring van de code
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+## Credits
+- [OpenAI](https://openai.com/) for their API
+- [Socket.io](https://socket.io/) for their library
+- [NodeJS](https://nodejs.org/en/) for their runtime
+- [NPM](https://www.npmjs.com/) for their package manager
+- [React](https://reactjs.org/) for their library
+- [ChatGPT](https://chat.openai.com/) for ideation and code-help
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+## License
+GNU GENERAL PUBLIC LICENSE v3.0
 
-<!-- This would be a good place for your data life cycle ♻️-->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
-
-<!-- How about a license here? When in doubt use MIT. 📜  -->
+Freedom to use, modify, and distribute software while 
+maintaining openness and requiring distribution of source code.

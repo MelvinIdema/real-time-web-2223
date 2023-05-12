@@ -88,7 +88,6 @@ export async function fetchStory({room, message = null} = {}) {
         });
         return res;
     } catch(err) {
-        console.log(err);
-        return await fetchStory({room, message})
+        return console.log(err);
     }
 }
